@@ -26,15 +26,15 @@ struct FormField: Hashable {
 
 class RegisterVC: UITableViewController {
     //    private var tableView: UITableView!
-        private var dataSource: UITableViewDiffableDataSource<Int, FormField>!
-        
-        // MARK: - Form Fields
-           
-        private var firstNameField = FormField(title: "First Name", placeholder: "Enter your first name")
-        private var lastNameField = FormField(title: "Last Name", placeholder: "Enter your last name")
+    private var dataSource: UITableViewDiffableDataSource<Int, FormField>!
+    
+    // MARK: - Form Fields
+    
+    private var firstNameField = FormField(title: "First Name", placeholder: "Enter your first name")
+    private var lastNameField = FormField(title: "Last Name", placeholder: "Enter your last name")
     //    private var avatarColorField = AvatarColorFormField()
-        private var additionalInfoField = FormField(title: "Additional Info", placeholder: "Enter additional information")
-           
+    private var additionalInfoField = FormField(title: "Additional Info", placeholder: "Enter additional information")
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         title = "Register";
@@ -53,8 +53,8 @@ class RegisterVC: UITableViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(formFields)
         dataSource.apply(snapshot, animatingDifferences: false)
-                
-
+        
+        
     }
 }
 
