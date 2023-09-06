@@ -496,6 +496,7 @@
 				DEVELOPMENT_TEAM = AB9HYRD9QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = registerDemo/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "我们需要访问您的相册以上传照片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -523,6 +524,7 @@
 				DEVELOPMENT_TEAM = AB9HYRD9QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = registerDemo/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "我们需要访问您的相册以上传照片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
