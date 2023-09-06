@@ -17,7 +17,9 @@
 		072A6EEA2AA826FA004A9DB3 /* registerDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A6EE92AA826FA004A9DB3 /* registerDemoUITestsLaunchTests.swift */; };
 		072A6EF82AA82E20004A9DB3 /* UserRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A6EF72AA82E20004A9DB3 /* UserRegisterModel.swift */; };
 		072A6EFE2AA82F74004A9DB3 /* UserRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A6EFD2AA82F74004A9DB3 /* UserRegisterViewModel.swift */; };
-		072A6F002AA83293004A9DB3 /* AvatarFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A6EFF2AA83293004A9DB3 /* AvatarFormField.swift */; };
+		072A6F002AA83293004A9DB3 /* AvatarFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A6EFF2AA83293004A9DB3 /* AvatarFormFieldCell.swift */; };
+		68EC2A4A2AA85BF4001E4B5A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EC2A492AA85BF4001E4B5A /* RegisterVC.swift */; };
+		68EC2A4C2AA861C8001E4B5A /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EC2A4B2AA861C8001E4B5A /* FormFieldCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		072A6EE92AA826FA004A9DB3 /* registerDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		072A6EF72AA82E20004A9DB3 /* UserRegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterModel.swift; sourceTree = "<group>"; };
 		072A6EFD2AA82F74004A9DB3 /* UserRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewModel.swift; sourceTree = "<group>"; };
-		072A6EFF2AA83293004A9DB3 /* AvatarFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarFormField.swift; sourceTree = "<group>"; };
+		072A6EFF2AA83293004A9DB3 /* AvatarFormFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarFormFieldCell.swift; sourceTree = "<group>"; };
+		68EC2A492AA85BF4001E4B5A /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterVC.swift; path = registerDemo/Module/RegisterVC.swift; sourceTree = SOURCE_ROOT; };
+		68EC2A4B2AA861C8001E4B5A /* FormFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				072A6EFB2AA82E76004A9DB3 /* Module */,
 				072A6EC62AA826F6004A9DB3 /* AppDelegate.swift */,
 				072A6EC82AA826F6004A9DB3 /* SceneDelegate.swift */,
+				072A6ECA2AA826F6004A9DB3 /* ViewController.swift */,
 				072A6ECF2AA826F9004A9DB3 /* Assets.xcassets */,
 				072A6ED12AA826F9004A9DB3 /* LaunchScreen.storyboard */,
 				072A6ED42AA826F9004A9DB3 /* Info.plist */,
@@ -149,7 +154,8 @@
 		072A6EFA2AA82E69004A9DB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				072A6EFF2AA83293004A9DB3 /* AvatarFormField.swift */,
+				072A6EFF2AA83293004A9DB3 /* AvatarFormFieldCell.swift */,
+				68EC2A4B2AA861C8001E4B5A /* FormFieldCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				072A6EFC2AA82E8E004A9DB3 /* Register */,
+				68EC2A492AA85BF4001E4B5A /* RegisterVC.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -168,7 +175,6 @@
 				072A6EF62AA82E10004A9DB3 /* Model */,
 				072A6EF92AA82E3F004A9DB3 /* ViewModel */,
 				072A6EFA2AA82E69004A9DB3 /* View */,
-				072A6ECA2AA826F6004A9DB3 /* ViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -304,10 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				072A6ECB2AA826F6004A9DB3 /* ViewController.swift in Sources */,
-				072A6F002AA83293004A9DB3 /* AvatarFormField.swift in Sources */,
+				072A6F002AA83293004A9DB3 /* AvatarFormFieldCell.swift in Sources */,
 				072A6EC72AA826F6004A9DB3 /* AppDelegate.swift in Sources */,
 				072A6EF82AA82E20004A9DB3 /* UserRegisterModel.swift in Sources */,
+				68EC2A4A2AA85BF4001E4B5A /* RegisterVC.swift in Sources */,
 				072A6EC92AA826F6004A9DB3 /* SceneDelegate.swift in Sources */,
+				68EC2A4C2AA861C8001E4B5A /* FormFieldCell.swift in Sources */,
 				072A6EFE2AA82F74004A9DB3 /* UserRegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +485,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = EP73U6E2WX;
+				DEVELOPMENT_TEAM = AB9HYRD9QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = registerDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -489,7 +497,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.balck.registerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baimiao.xu.registerPageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -504,7 +512,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = EP73U6E2WX;
+				DEVELOPMENT_TEAM = AB9HYRD9QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = registerDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -516,7 +524,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.balck.registerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baimiao.xu.registerPageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

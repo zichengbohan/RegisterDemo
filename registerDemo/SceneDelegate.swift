@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         // 创建你的自定义根视图控制器
-        let rootViewController = ViewController() // 用你的自定义视图控制器替换这里
+        let rootViewController = UINavigationController(rootViewController: ViewController()) // 用你的自定义视图控制器替换这里
 
         // 设置根视图控制器
         window.rootViewController = rootViewController
