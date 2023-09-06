@@ -12,7 +12,7 @@ import UIKit
 class AvatarImagePIckerViewModel {
     // 输入
     var selectedAvatarImage: CurrentValueSubject<UIImage?, Never> = .init(nil)
-    var selectedColor: CurrentValueSubject<UIColor, Never> = .init(.white)
+    var selectedColor: CurrentValueSubject<UIColor, Never> = .init(.red)
     
     // 输出
     var avatarImage: AnyPublisher<UIImage?, Never> {

@@ -9,7 +9,7 @@ import UIKit
 import Combine
 import PhotosUI
 
-class ImagePIckerWithColorView: UIView, UIColorPickerViewControllerDelegate, PHPickerViewControllerDelegate {
+class ImagePIckerWithColorView: UIView, PHPickerViewControllerDelegate {
     
     private var avatarImageViewModel: AvatarImagePIckerViewModel;
     
@@ -33,7 +33,7 @@ class ImagePIckerWithColorView: UIView, UIColorPickerViewControllerDelegate, PHP
 
         viewModel.backgroundColor
             .sink { [weak self] color in
-                self?.backgroundColor = color
+                self?.colorPickerButton.backgroundColor = color
             }
             .store(in: &cancellables)
 
@@ -90,8 +90,8 @@ class ImagePIckerWithColorView: UIView, UIColorPickerViewControllerDelegate, PHP
                switch status {
                case .authorized:
                    // 用户已授权相册访问权限，可以执行相册操作
-                   DispatchQueue.main.async {
-                       self.popUpImagePicker();
+                   DispatchQueue.main.async { [weak self] in
+                       self?.popUpImagePicker();
                    }
                    break
                case .denied, .restricted:
@@ -154,8 +154,8 @@ class ImagePIckerWithColorView: UIView, UIColorPickerViewControllerDelegate, PHP
                 print("Error loading image: \(error)")
             } else if let image = loadedObject as? UIImage {
                 // You have successfully loaded the UIImage, now you can use it.
-                DispatchQueue.main.async {
-                    self.avatarImageViewModel.selectedAvatarImage.send(image);
+                DispatchQueue.main.async { [weak self] in
+                    self?.avatarImageViewModel.selectedAvatarImage.send(image);
                     // Update your UI with the loaded image, e.g., assign it to an imageView.
 //                    self.imageView.image = image
                 }
@@ -168,4 +168,19 @@ class ImagePIckerWithColorView: UIView, UIColorPickerViewControllerDelegate, PHP
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+
+extension ImagePIckerWithColorView: UIColorPickerViewControllerDelegate {
+    func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
+        let selectedColor = viewController.selectedColor
+        self.avatarImageViewModel.selectedColor.send(selectedColor);
+//        view.backgroundColor = selectedColor
+//        viewController.dismiss(animated: true, completion: nil)
+    }
+
+    func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+//        let selectedColor = viewController.selectedColor
+//        view.backgroundColor = selectedColor
+    }
 }
