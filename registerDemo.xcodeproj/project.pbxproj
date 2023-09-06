@@ -20,6 +20,8 @@
 		072A6F002AA83293004A9DB3 /* AvatarFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A6EFF2AA83293004A9DB3 /* AvatarFormFieldCell.swift */; };
 		68EC2A4A2AA85BF4001E4B5A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EC2A492AA85BF4001E4B5A /* RegisterVC.swift */; };
 		68EC2A4C2AA861C8001E4B5A /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EC2A4B2AA861C8001E4B5A /* FormFieldCell.swift */; };
+		68EC2A4E2AA86519001E4B5A /* ImagePIckerWithColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EC2A4D2AA86519001E4B5A /* ImagePIckerWithColorView.swift */; };
+		68EC2A502AA868CB001E4B5A /* AvatarImagePIckerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EC2A4F2AA868CB001E4B5A /* AvatarImagePIckerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		072A6EFF2AA83293004A9DB3 /* AvatarFormFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarFormFieldCell.swift; sourceTree = "<group>"; };
 		68EC2A492AA85BF4001E4B5A /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterVC.swift; path = registerDemo/Module/RegisterVC.swift; sourceTree = SOURCE_ROOT; };
 		68EC2A4B2AA861C8001E4B5A /* FormFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldCell.swift; sourceTree = "<group>"; };
+		68EC2A4D2AA86519001E4B5A /* ImagePIckerWithColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePIckerWithColorView.swift; sourceTree = "<group>"; };
+		68EC2A4F2AA868CB001E4B5A /* AvatarImagePIckerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImagePIckerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				072A6EFD2AA82F74004A9DB3 /* UserRegisterViewModel.swift */,
+				68EC2A4F2AA868CB001E4B5A /* AvatarImagePIckerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			children = (
 				072A6EFF2AA83293004A9DB3 /* AvatarFormFieldCell.swift */,
 				68EC2A4B2AA861C8001E4B5A /* FormFieldCell.swift */,
+				68EC2A4D2AA86519001E4B5A /* ImagePIckerWithColorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,7 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68EC2A502AA868CB001E4B5A /* AvatarImagePIckerViewModel.swift in Sources */,
 				072A6ECB2AA826F6004A9DB3 /* ViewController.swift in Sources */,
+				68EC2A4E2AA86519001E4B5A /* ImagePIckerWithColorView.swift in Sources */,
 				072A6F002AA83293004A9DB3 /* AvatarFormFieldCell.swift in Sources */,
 				072A6EC72AA826F6004A9DB3 /* AppDelegate.swift in Sources */,
 				072A6EF82AA82E20004A9DB3 /* UserRegisterModel.swift in Sources */,

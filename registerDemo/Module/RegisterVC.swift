@@ -29,7 +29,7 @@ class RegisterVC: UITableViewController {
     private var dataSource: UITableViewDiffableDataSource<Int, FormField>!
     
     // MARK: - Form Fields
-    
+    private var avatarColorField = FormField(title: "Avatar", placeholder: "");
     private var firstNameField = FormField(title: "First Name", placeholder: "Enter your first name")
     private var lastNameField = FormField(title: "Last Name", placeholder: "Enter your last name")
     //    private var avatarColorField = AvatarColorFormField()
@@ -39,22 +39,36 @@ class RegisterVC: UITableViewController {
         super.viewDidLoad();
         title = "Register";
         tableView.translatesAutoresizingMaskIntoConstraints = false;
+        tableView.register(AvatarFormFieldCell.self, forCellReuseIdentifier: AvatarFormFieldCell.reuseIdentifier);
         tableView.register(FormFieldCell.self, forCellReuseIdentifier: FormFieldCell.reuseIdentifier);
+        
         // Create the data source
         dataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { (tableView, indexPath, formField) -> UITableViewCell? in
+            if indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: AvatarFormFieldCell.reuseIdentifier, for: indexPath) as! AvatarFormFieldCell
+                cell.configure(with: formField)
+                return cell
+            }
             let cell = tableView.dequeueReusableCell(withIdentifier: FormFieldCell.reuseIdentifier, for: indexPath) as! FormFieldCell
             cell.configure(with: formField)
             return cell
         });
         
         // Set up the form fields
-        let formFields: [FormField] = [firstNameField, lastNameField, additionalInfoField]
+        let formFields: [FormField] = [avatarColorField, firstNameField, lastNameField, additionalInfoField]
         var snapshot = NSDiffableDataSourceSnapshot<Int, FormField>()
         snapshot.appendSections([0])
         snapshot.appendItems(formFields)
         dataSource.apply(snapshot, animatingDifferences: false)
         
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 120
+        }
         
+        return 44
     }
 }
 

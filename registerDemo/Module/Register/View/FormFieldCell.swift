@@ -47,7 +47,7 @@ class FormFieldCell: UITableViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             titleLabel.widthAnchor.constraint(equalToConstant: 120) // 根据需要调整宽度
-        ])
+        ]);
         
         // 设置文本框约束
         NSLayoutConstraint.activate([
